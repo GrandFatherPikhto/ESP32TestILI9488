@@ -1,2 +1,12 @@
-idf_component_register(SRCS "spi_lcd_touch_example_main.c" "lvgl_demo_ui.c"
-                       INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS 
+        "app_main.c"
+        "./display/lcd_display.c"
+        "./display/lvgl_port.c"
+        "./display/touch_controller.c"
+        "lvgl_demo_ui.c"
+    INCLUDE_DIRS 
+        "."
+        "./include/"
+        "./display/include/"
+)
